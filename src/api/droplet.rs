@@ -1,6 +1,6 @@
 use self::droplet_fields::{Kernel, Networks, NextBackupWindow};
 use super::snapshot::Snapshot;
-use super::{ApiLinks, ApiMeta};
+use super::ApiLinks;
 use super::{HasPagination, HasResponse, HasValue};
 use super::{Image, Region, Size};
 use chrono::{DateTime, Utc};
@@ -485,7 +485,6 @@ impl HasValue for DropletResponse {
 pub struct DropletListResponse {
     droplets: Vec<Droplet>,
     links: ApiLinks,
-    meta: ApiMeta,
 }
 
 impl HasResponse for Vec<Droplet> {
